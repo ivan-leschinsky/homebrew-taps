@@ -5,21 +5,21 @@
 class TaketoGo < Formula
   desc "A tiny helper utility to make access to servers eaiser for different projects and environments."
   homepage "https://github.com/ivan-leschinsky/taketo-go"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ivan-leschinsky/taketo-go/releases/download/v0.2.0/taketo-darwin-amd64", using: :nounzip
-      sha256 "e3c1afa0b2cf2aeaeae593b7c5a0962f31a4ccd407905e905ee77935ad4327e3"
+      url "https://github.com/ivan-leschinsky/taketo-go/releases/download/v0.2.1/taketo-darwin-amd64", using: :nounzip
+      sha256 "7faa6547bf0b47986b82607e8292f39d74c65a119e9c8fef0c37ab18177a94e3"
 
       define_method(:install) do
         bin.install "taketo-darwin-amd64" => "taketo-go"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ivan-leschinsky/taketo-go/releases/download/v0.2.0/taketo-darwin-arm64", using: :nounzip
-      sha256 "009b7d03377f716e56b7420ff9d7a4c9376bba841c47c5e6072b3f8080952d95"
+      url "https://github.com/ivan-leschinsky/taketo-go/releases/download/v0.2.1/taketo-darwin-arm64", using: :nounzip
+      sha256 "19d713edeb306152d72f0d4f290baf01ece87ef95019e63a3db8a73be3bcf2a7"
 
       define_method(:install) do
         bin.install "taketo-darwin-arm64" => "taketo-go"
@@ -29,22 +29,22 @@ class TaketoGo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ivan-leschinsky/taketo-go/releases/download/v0.2.0/taketo-linux-amd64", using: :nounzip
-      sha256 "ba1a195de45410c648ee337923fd6fc2c23cd09f1abd7f3b879a03dcf2ab32bb"
+      url "https://github.com/ivan-leschinsky/taketo-go/releases/download/v0.2.1/taketo-linux-amd64", using: :nounzip
+      sha256 "3ff18b0fc66e165f1ea470652ea6551c93f294efc2fe621634454fcdec9106fa"
       define_method(:install) do
         bin.install "taketo-linux-amd64" => "taketo-go"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/ivan-leschinsky/taketo-go/releases/download/v0.2.0/taketo-linux-arm", using: :nounzip
-      sha256 "a1defabd9b0d05bcc95f835b18a4d05324880e346da4d56b058ddf109eca2d17"
+      url "https://github.com/ivan-leschinsky/taketo-go/releases/download/v0.2.1/taketo-linux-arm", using: :nounzip
+      sha256 "256b1c34f088d5d2f2db7fef5d0eb4bf36121e3d87a72e1e1e0e794fa081a6a9"
       define_method(:install) do
         bin.install "taketo-linux-arm" => "taketo-go"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ivan-leschinsky/taketo-go/releases/download/v0.2.0/taketo-linux-arm64", using: :nounzip
-      sha256 "220345f406b095bf77d6babcb2bf0dc57fbd056ebd3bd3ea2d9e1273a9d95fd0"
+      url "https://github.com/ivan-leschinsky/taketo-go/releases/download/v0.2.1/taketo-linux-arm64", using: :nounzip
+      sha256 "73635cbbb8bef1bbd727aeae5855526fe69556691ddd5281be906a79810fc3e0"
       define_method(:install) do
         bin.install "taketo-linux-arm64" => "taketo-go"
       end
